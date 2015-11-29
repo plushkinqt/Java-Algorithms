@@ -3,10 +3,13 @@ package lambda;
 import java.util.List;
 
 /**
- *
- * @author Yevgen Zinchenko
+ *Write a function, that takes as an input a list of integers and returns a sum of all even integers in the list.
+ *You are not allowed to use any kind of loops and you have to do all additions by using + operator.
+ *Function's Big-O time complexity must be O(N).
+ * 
  */
 public class Summer {
+    
     public long sumOfEven(List<Integer> list){
         if(list == null){
             return 0;
@@ -18,13 +21,5 @@ public class Summer {
                 .reduce( 0, (a, b) -> a + b);
         return even;
     }
-    /**
-     * This function is O(N) (linear)
-     * 
-     * Time complexity is good, because when we double number of elements in the list computation time is doubled.
-     * 
-     * Space complexity: reduce function returns a new value every time when it makes an operation, so this program space
-     * complexity might be improved if reduce function added values to the same variable.
-     * 
-     */
+    
 }
